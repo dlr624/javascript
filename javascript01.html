@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>자바스크립트 1일차</title>
+
+    <!-- 자바스크립트란? -->
+    <!-- 자바스크립트는 web의 기본 프로그래밍 언어(스크립트 언어) -->
+    <!-- 자바스크립트는 html을 실시간으로 생성, 수정, 삭제할 수 있음 -->
+    <!-- 자사크릅티는 CSS 를 실시간으로 생성, 수정, 삭제및 적용 할 수 있음 -->
+    <!-- 자바스크립트는 web의 이벤트를 이용하여 동적인 web 페이지를 만들 수 있음 -->
+    
+    <!--자바스크립트 사용방법 -->
+    <!--1.inline 방식 -->
+        <!-- html 태그에 자바스크립트 코드를 직접 입력하는방식 -->
+    <!--2. 현재 web 페이지에 <script></script> 태그를 사용 후 자바스크립트 코드를 입력하는 방식-->
+        <!-- 주로 <head></head> 내에 <script>/<script> 태그를 입력 후 사용 -->
+        <!-- <body></body> 태그 내에 <script></script> 태그 사용후 자바스크립트 코드 입력해도 상관없음 -->
+         <!--body 태그 내에 사용시 body태그 맨 아래에 입력함  -->
+         <!-- body태그 아무곳에 사용 하나 관례적으로 아래에 입력함 -->
+         <!-- 요즘엔 잘 사용하지않는 방식 -->
+    <!--3. 외부 자바스크립트 파일 로드 방식 -->
+            <!-- <script src="파일경로></script> 형태로 사용가능" -->
+            <!-- 가장 많이 사용하는 형식 -->
+            <!-- 디자인 영역과 프로그램밍 영억을 분리하여 관리가능 -->
+            <!-- 하나의 파일로 여러개의 html 파일에서 사용이 가능하다(소스의 재활용)-->
+    
+    
+            <!-- 자바스크립트도 html처럼 위에서 아래로 한줄씩 실행 -->
+            <!-- 자바스크립트는 오류가 발생 시 더이상 실행하지 않음 -->
+
+            <!-- 자바스크립트는 오류가 방생 시 오류가 발생한 시점 아래에 작동안댐 -->
+            <!-- <script></scrpit> 태그에 여러ㅏ개 사용 중 오류가 발생했을 경우 오류가 발생한 script 태그 부분은 정상적으로 실행됨 -->
+            
+    <script>
+        alert('head태그에 입력한 자바스크립트')
+    </script>
+    <script src="./javascript01.js"></script>
+
+</head>
+<body>
+    <h2>첫번째 자바스크립트 프로그래밍</h2>
+    <button type="button" onclick="document.getElementById('time') .innerHTML = Date();"> 클릭 시 현재시간 출력 </button>
+    <script>
+        alert('바디태그 중간에 입력한 자바스크립트')
+    </script>
+
+    <button onclick="alert('마우스로 클릭 했습니다.');">클릭하세요</button>
+    <button oncontextmenu="alert('마우스 오른쪽 클릭은 금지 되어있다.');">마우스 오른쪽 버튼으로 클릭</button>
+    <br><br><br>
+    <img src="../image/001.jpg">
+
+
+
+    <button onclick="domcument.hetElementById('image').src='../html/image/001jpg';"> 클릭시1번 나옴</button>
+    <button onclick="domcument.hetElementById('image').src='../html/image/002jpg';"> 클릭시2번 나옴</button>
+    <button onclick="domcument.hetElementById('image').src='../html/image/003jpg';"> 클릭시3번 나옴</button>
+
+
+    <p id="time"></p>
+
+    
+    
+    <script>
+        alert('바디태그에 입력한 자바스크립트')
+    </script>
+</body>
+</html>
