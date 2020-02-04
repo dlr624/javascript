@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>자바스크립트 4일차</title>
+
+    <script>
+    // if~else if~else
+    // 조건을 여러개 사용하여 결과갚이 true 가 되는 부분을 실행하는 조건문
+    // 만약 모든 조건이 완료하지못하면 else문으로 실행
+    // if첫번쨰 조건문을 확인하여 결과값이 tre일 경우 바로 아래 있는 ㅋ실행 코드를 실행하고 만약 결과값이 
+    //위의 로직을 계속 실행하면서 다음 조건의 결과값을 확인함 만약 모든 조건을 만족하지 못하면 elsee 문을 실해암
+    // else if (조건1) {
+        //조건1 true 일 경우 실행할 코드
+        //} else if {
+            //조건 2가 treu일 경우 실행하 코드
+            // } else if {
+                //
+ //           }
+ //...
+ ////딘ㄷ {
+
+ //}
+// var score = 50; 
+
+// if  (socre > 90) {
+//     console.log("당신의 점수는" + score + "점이고 학점은 A 입니다");
+// } 
+
+// else if ( score > 80) {
+//     console.log("당신의 점수는" + socre + "점이고, 학점은 B입니다");
+// }
+
+// else if ( score > 70) {
+//     console.log("당신의 점수는" + socre + "점이고, 학점은 C입니다");
+// }        
+    
+// else if ( score > 60) {
+//     console.log("당신의 점수는" + socre + "점이고, 학점은 D입니다");
+// }
+
+
+// else 를 사용하지 않은 if ~ else if 문
+//if 문과 같은 형식으로 사용하는 if ~ else if문
+
+// var score1 = 73;
+// var level;
+
+// if (socre > 90) {
+//     level = "A";
+// }
+// else if(score > 90) {
+//     level = "A";
+// }
+// else if  (score > 70){
+    
+//     level = "C";
+// }
+
+// console.log();
+
+//모든 switch - case 문은 if~ else if~ else 문으로 뱐환이 가능함
+
+
+//사용법 //case 조건식에 해당하는 값 1 :
+//실행할 코드...
+//break;
+//...
+// switch
+// default
+// 실행할코드...
+// break; //만약 break 를 입력하지 않으면바로 아래에 있는 case 문을 추가로 실행하는 경우가 발생함
+// }
+    // var day = new Date().getDay();
+    // console.log(Date);
+
+    // switch (6) {
+    //     case 1: 
+    //     console.log("월요일 입니다.")
+    //     break; 
+      
+
+     
+    //     case 2: 
+    //     console.log("화요일 입니다.")
+    //     break; 
+      
+      
+    //     case 3: 
+    //     console.log("수요일 입니다.")
+    //     break; 
+      
+
+    //     case 4: 
+    //     console.log("목요일 입니다.")
+    //     break; 
+      
+      
+    //     case 5: 
+    //     console.log("금요일 입니다.")
+    //     break; 
+      
+      
+    //     case 6: 
+    //     console.log("토요일 입니다.")
+    //     break; 
+      
+        
+    //     case 7: 
+    //     console.log("일요일 입니다.")
+    //     break; 
+        
+
+    //   default :
+    //   console.log("주말입니다");
+    //   break;
+    //   }
+
+    //   console.log("switch ~ case 룰 else if 문으로 변환");
+    //   var day = new Date().getDay();//현재 시간을 기준으로 오늘 요일을 숫자로 표현함
+
+    // if (day == 1) {
+    //     console.log("월요일 입니다")
+    // }
+
+    // else if (day == 2) {
+    //     console.log("화요일 입니다")
+    // }
+
+    // else if (day == 3) {
+    //     console.log("수요일 입니다")
+    // }
+
+    // else if (day == 4) {
+    //     console.log("목요일 입니다")
+    // }
+
+    // else if (day == 5) {
+    //     console.log("금요일 입니다")
+    // }
+
+    // else {
+    //     console.log("주말 입니다")
+    // }
+
+    // // 조건문은 다른 조건문과 겹쳐서 사용할 수 있음
+    // if (조건식) {
+    //     if (조건식)
+    // }
+
+    // var score = 73;
+    
+    // if(score > 95) {
+    //     if(socre > 85){
+    //         console.log("정수 :" + socre +", 등급 : A+");
+    //     }
+    //     else{
+    //     console.log("정수 :" + socre +", 등급 : A");
+    // }
+    // }
+    // else if (score > 90){
+    //     console.log("정수 :" + socre +", 등급 : B+");
+    // }
+    // else if (socre > 85){
+    //     console.log("정수 :" + socre +", 등급 : C+");
+    // }
+    // else if (socre > 80){
+    //     if(socre > 85){
+    //         console.log("정수 :" + socre +", 등급 : D+");
+    //     }
+    //     console.log("정수 :" + socre +", 등급 : D");
+    // }
+    // else (socre > 70); {
+    //     console.log("정수 :" + socre +", 등급 : F");
+    // }
+
+    // 문제 3)점심시간에 중화요리 집에가서 먹을 음식을 선택하는 프로그램을 작성
+    // else if 문을 사용하여 음식 3가지를 선택
+    // else 문 꼭 사용
+    // 2번쨰 if 사이드메뉴를 주문여부 확인
+    // var bumock = true;
+
+    
+    // var food = true;
+
+    // if ( food != true) {
+        
+    //     console.log("짜장면");
+    //     console.log("짬뽕");
+    //     console.log("볶음밥");
+    // }
+    // else {
+    //     console.log("라조기");
+    //     console.log("라조육");
+    //     console.log("탕수육");
+    // }
+
+    var food1 = "짬뽕";
+    var food2 = "사이드";
+    // var sidemenu = true
+    if (food1 == "라조육") {
+        console.log("라조육 하나");
+    }
+
+    else if (food1 == "짬뽕") {
+        console.log("짬뽕 하나");
+    }
+    else {
+        console.log("볶음밥 하나")
+    }
+    if (food2 == "사이드") { 
+        console.log("군만두 하나");
+    }
+    // if (sidemenu == true) {
+    //     side = "군만두."
+    // }
+
+    
+
+    // 문제 4) 문제 3번과 동일한 문제이니 중복 if문을 사용하여 한번에 사이드 메뉴와 주 메뉴를 선택하여 화면에 출력
+    // var food3 = "짜장"
+
+    // 문제 5) 성적표 출력하기
+    //다중 if문을 사용하여 성적표 출력
+
+    // prompt():사용자의 입력을 받는 자바스크립트 함수 
+        //입력받은 데이터를 문자열로 받는다.
+        //숫자로 사용하려면 변환이 필요하다 (Number(), parseInt(),parseFloat())
+
+
+    var score = prompt("점수를 입력하세요 : "); //입력된 데이터를 문자열로 받아옴
+    socre = Number(score); //숫자 타입으로 변환됨
+    
+    var level;
+
+    // var not = true;
+    // if(not == true) {
+    //     console.log("error")
+    // }
+    // else {
+    //     console.log("good")
+    // }
+    if (socre >= 0 && score <= 100 ) {
+
+    
+
+    if(score > 90) {
+        if(socre > 95){
+            level = "A+";
+        }
+        else{
+       level="A";
+        }
+    }
+    else if (score > 80) {
+        if(socre > 85){
+           level = "B+";
+        }    
+        else{
+            level="B";
+        }
+    }
+    else if (score > 70) {
+        if(socre > 75){
+           level = "C+";
+        }    
+        else{
+            level="C";
+        }
+    }
+    else if (score > 60) {
+        if(socre > 65){
+           level = "D+";
+        }    
+        else{
+            level="D";
+        }
+    }
+    
+    else {
+        level="F";
+    }
+
+    console.log("점수 :" + socre + ", 등급 " + level);
+
+    
+    }
+
+    else{
+        console.log("잘못된 점수");
+    }
+
+    
+    
+</script>
+</head>
+<body>
+    
+</body>
+</html>
