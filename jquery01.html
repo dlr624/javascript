@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery1일차</title>
+    <link rel="stylesheet" href="./style/jquery01.css">
+    
+    <script src="./jquery-3.4.1.js"></script>
+    <script src="./js/jquery.color-2.1.2.js"></script>
+    <script src="./js/jquery01.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+        
+        // jquery 효과
+        // hide/show/toggle : jquery에서 미리 만들어 놓은 css효과
+        //hide() : 지정한 html 태그를 숨김 (display : none 과 같음)
+            // $(선택자),hide(속도, 콜백함수)
+            // 속도는 총 동작 시간으로 계싼됨
+            // 1/1000 초로 계산
+        // show() : 숨겨진 html 태그를 보임
+            // $(선택자).show(속도,콜백함수)
+        // toggle() : hide()/show() 의 기능을 돌어가며 실행
+            // $ 선택자.(속도,콜백함수)
+            $("#btnHide").on("click", function(){
+                // $("#div01p").hide(); //기본사용
+                // $("#div01p").hide(300); //실행 속도 추가
+                $("#div01p").hide(800); //콜백함수사용
+                    alert("hide()가 실행되었습니다.");
+            });
+
+            $("#btnShow").on("click", function(){
+                // $("#btnShow").show();
+                // $("#btnShow").show(500);
+                $("#div01p").show(800);
+                    alert("hide()가 실행되었습니다.");
+            });
+
+            $("#btnToggle").on("click", function(){
+                // $("#div01p").toggle();
+                // $("#div01p").toggle(600);
+                $("#div01p").toggle(800);
+                    alert("hide()가 실행되었습니다.");
+            });
+
+
+            // 슬라이드 효과
+            // slideDown() :
+            // slideUp() :
+            // slideToggle():
+        });
+    </script>
+</head>
+<body>
+    <div id="div01">
+        <p id="div01p">아래 버튼 크릭 시 숨겨졌다 보였다 할 글자</p>
+
+        <button id="btnHide">클릭시숨김</button>
+        <button id="btnShow">클릭시보임</button>
+        <button id="btnToggle">클릭시Toggle</button>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div02">
+        <div id="div02flip1" class="div02box">클릭</div>
+        <div id="div02panel1">확장 될 영역</div>
+        <br><br>
+        <div id="div02flip2" class="div02box">클릭</div>
+        <div id="div02panel2" class="div02box">축소 될 영역</div>
+        <br><br>
+        <div id="div02flip3" class="div02box">클릭</div>
+        <div id="div02panel3" class="div02box">확장/축소 될 영역</div>
+
+
+    </div> 
+
+    <br><br><br><hr>
+
+    <div id="div03">
+        <button id="div03btn1">클릭 시 애니메이션 동작</button>
+
+        <div id="div03div"></div>
+    </div>
+
+    <br><hr><br>
+    <div id="div04">
+        <button id="div04btn1">클릭시 효과 멈춤</button>
+        <button id="div04btn2">클릭시 fade 효과 멈춤</button>
+        <button id="div04btn4">클릭시 animate 효과 멈춤</button>
+        <br><br>
+        <div id="div04flip" class="div04box">클릭 시 슬라이드</div>
+        <div id="div04panel" class="div04box">확장될 영역</div>
+        <br>
+        <div id="div04div1"></div>
+        <br>
+        <div id="div04div2"></div>
+
+        <br><br>
+        <div style="margin-top: 300px;">
+        <button id="div04btn4">click시 멈춤</button>
+        <div id="div04div3"></div>
+        </div>
+
+        <br><hr><br>
+
+    </div> 
+    <div id="div05">
+        <button id="div05btn1">콜백함수 미사용</button>
+        <button id="div05btn2">콜백함수 사용</button>
+
+        <h3>버튼 클릭 시 숨겨진 글자</h3>
+    </div>
+    <br><br><br>
+
+    <div id="div06">
+        <button id="div06btn">체인도ㅓㅇ작</button>
+        <h3>제이쿼리 뭐 체인기능 사용</h3>
+    </div>
+    <br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+</body>
+</html>

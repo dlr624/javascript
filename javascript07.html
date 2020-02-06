@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>자바 스크립트 7일차</title>
+    
+    <script>
+    // 문제 해결 방법
+    // 1.body 태그 가장 아래에 자바 스크립트 코드를 입력
+    // 2. 웹 페이지 이벤트 load 이벤트를 이용
+    // 2.1load :이벤트사용
+    // 기본load 이벤트를 사용하여 body모든 리소스가 로드된 후 자바 스크립트가 동작하도록 함
+    // 모든 리소스가 로드된 이후에 자바스크립트가 동작되므로 만약 고용량 이미지나 동영상등 고용량 미디어 파일이 이을 경우 이 미디어 파일이 로드가 되기 전 까지 자바스크립트 코드가 동작하지 않는 단점이 있음
+    // // 오래전 부터 존재하던 방식이기 떄문에 ie8이하에서도 정상적으로 동작됨
+ 
+//  2.2DOMContentLoaded 사용
+//  2.2DOMContentLoaded 사용시 body 태그의 html태그가 모두 로딩된 이후 자바 스크립트 코드를 실행함
+// onload 이벤트보다 동작 시점이 더 빠름
+window.addEventListener("DOMCContentLoaded" , function()
+{
+    var btnContentLoad = document.querySelector
+    ("#btn01");
+
+    btnContentLoad.onmouseover = function() {
+        alert("DOMContentLoaded 이벤트를 사용");
+    };
+});
+ 
+//  $(document).ready(function() {
+//      $("#btn01").on("mouseout", function()
+//      )
+//  })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

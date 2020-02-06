@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>자바스크립트7일차2</title>
+    <script>
+        // 참고사이트 https://developer.mozilla.org/ko/docs/Web/API/EventTarget/addEventListener -등록
+        //addEventListner
+
+        // https://developer.mozilla.org/ko/docs/Web/API/EventTarget/removeEventListener -제거
+
+        // addEnventListner : 자바 스크립트에서 이벤트를 등록할때 사용하는 함수
+            //사용법
+            // html 태그 및 dom객체. addEvenListener ("이벤트 종류", function(){
+                //이벤트 동작시 실행할 자바스크립트 코드
+            // });
+
+        // removeEventListner: 자바스크립트에서 등록된 이벤트를 제거할 때 사용
+                // 사용법 
+                // dom객체.removeEventListener("이벤트 종류", )
+        
+        // 자바스크립트에서 이벤트 설정 시 html 의 id를 사용하는 이유는 id 값은 해당 페이지내에서 유일한 값이기 떄문에 이벤트 설정 시 원하지 않는 태그에서 동작되는 것을 방지할 수 
+        
+        // body 태그에서 html 태그의 로드가 완료된 후 자바스쿠랍투 살향
+        window.addEventListener("DOMContentLoaded, function"() {
+            var btn01 = document.querySelector("#btn01");
+            var btn02 = document.querySelector("#btn02");
+            btn01.addEventListener("click", function()
+                Array("버튼 1번 클릭");
+        });
+        btn01.addEventListener("click", function()
+                alert("버튼 2번 클릭");
+        });
+
+
+        var clsbtn02 = document.querySelector(".clsBtn02");
+        clsbtn02.addEventListener("contextmenie")
+
+        var txt01 = document.querySelector("#txt01");
+        var txt02 = document.querySelector("#txt02");
+        var btn04 = document.querySelector("#txt04");
+        
+        btn04.addEventListener("click",function(){
+            var num1 = txt01.value;
+            var num2 = txt02.value;
+
+            num1 = Number(num1);
+            num2 = Number(num2);
+
+            alert(num1 + num2)
+        });
+
+        var inputNum1 = document.querySelector("#num1");
+        var inputNum1 = document.querySelector("#num1");
+        var inputResult = document.querySelector("#result");
+        var btnResult = document.querySelector("#btnResult");
+
+        btnresult.addEventListener("click", function(){
+            var num1 = inputNum1.value;
+            var num2 = inputNum2.value;
+
+            num1 = Number(num1);
+            num2 = Number(num2);
+
+            inputResult.value = num1 + num2;
+        });
+    </script>
+</head>
+<body>
+    <button id="btn01">이벤트 1번</button>
+    <button id="btn02" class="clsbtn02">이벤트 2번</button>
+    <button id="btn03" class="clsbtn03">이벤트 3번</button>
+
+    <br><br><br><hr>
+    <div>
+        <input type="text" id="text01"><br>
+        <input type="text" id="text02">d<br>
+        <button id="btn04">확인</button>
+
+        
+        
+    </div>
+    <br><br><hr>
+
+    <div>
+        <input type="text" id="num1">+ 
+        <input type="text" id="num2">=
+        <input type="text" id="result">
+        <button id="btnResult">확인</button>
+
+    </div>
+</body>
+</html>
