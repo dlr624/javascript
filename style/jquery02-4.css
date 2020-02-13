@@ -1,0 +1,8 @@
+#div01 > * {
+    font-size:24px;
+}
+
+.fontSize { font-size:5em;}
+.fontWeight{ font-weight:bold;}          
+.fontColor{ color: brown;}
+
