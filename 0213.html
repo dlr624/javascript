@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 9일</title>
+
+    <script>
+        // ofject var test = {};
+                // test = { key1 = "값1",key2 = "값2", key3 = "값3", key4 = "값4", };
+                // 배열은 주로 동일한 형식의 데이터를 저장
+                // object 하나의사물에 대한 각각의 데이터
+
+        var array = [];
+
+        var burgur = {햄버거 : "살사리코", 칼로리 : "607", 나트륨 : "833", 당류 : "5", 포화지방 : "9"};
+        var burgur2 = {햄버거 : "인크레더블", 칼로리 : "701", 나트륨 : "788", 당류 : "4", 포화지방 : "12"};
+        var burgur3 = {햄버거 : "마살라", 칼로리 : "416", 나트륨 : "588", 당류 : "11", 포화지방 : "2"};
+        
+        // array [0] = burgur ; //배열 넣는방법 1
+        // array.push(burgur2); //배열 넣는방법 2
+        // array.push(burgur3);
+        // console.log(array);
+
+        // for ( var h in burgur)
+        // console.log(h + ":" + burgur[h] );
+       
+        // for (i = 0; i < array.length; i++){
+        //     for(var h in array[i]){
+        //     console.log(array[i][h]);
+           
+        //     }
+        // }
+
+        function ham(){
+            var burgur = {햄버거 : "살사리코", 칼로리 : "607", 나트륨 : "833", 당류 : "5", 포화지방 : "9"};
+            var burgur2 = {햄버거 : "인크레더블", 칼로리 : "701", 나트륨 : "788", 당류 : "4", 포화지방 : "12"};
+            var burgur3 = {햄버거 : "마살라", 칼로리 : "416", 나트륨 : "588", 당류 : "11", 포화지방 : "2"};
+            for( var h in burgur){
+                console.log(h+":"+burgur[h]);  
+        
+            }
+        }
+        ham ();
+
+        console.log("---------------------------------------------------------------------------------------------");
+
+
+
+
+
+        var burgur = {햄버거 : "살사리코", 칼로리 : "607", 나트륨 : "833", 당류 : "5", 포화지방 : "9"};
+        function ham2(burgur){
+            for( var h in burgur){
+                console.log(h+":"+burgur[h]);  
+         }
+    }
+        ham2 (burgur);
+        console.log("---------------------------------------------------------------------------------------------");
+        
+        var car = {name : "말리부", color : "검정색", type : "세단", cc : "2000cc", price : "3000만원"}
+        function c1(car){
+            for( var s in car){
+                console.log(s + ":" + car[s]);
+            }
+        }   
+        c1(car);
+        /////////////////////////////////////////////////1~10까지 의 합 함수
+        
+        function hap(){
+            var num = 0;
+            for (var i = 0; i <= 10; i++){
+                num = num + i;
+                console.log(num)
+        
+            }
+        }
+        hap();
+////////////////////////////////////////구구단 함수
+       function dan(){
+            for ( var i = 2; i <= 9; i++) {
+                console.log("---"+i+"단^^---")
+                for (var j = 1; j <= 9; j++) {
+                console.log(i + " x " + j + " = " + i * j);
+            }
+        }
+    }
+    dan();
+
+    function sung(){
+       var text = prompt("점수입력");
+       var score = Number(text);
+
+       
+
+    }
+
+    console.log("---------------------------------------------------------------------------------------------");
+
+//함수로 구구단 원하는 단수
+
+    function inGugudan(){
+            var dan = prompt("출력할 구구단의 단수를 입력하세요");
+            dan = Number(dan);
+            return dan;
+    } 
+
+             
+    function outGugudan(dan){
+        var dan = inGugudan();
+    for (var i = 1; i <= 9; i++) {
+            console.log(dan + " * " + i + " = " + dan * i )
+        }
+     }       
+         function printMSG (dan, i) {
+            console.log(dan + " * " + i + " = " + dan * i )
+        }
+            outGugudan(dan);
+       
+
+    </script>
+</head>
+<body>
+    
+    
+</body>
+</html>

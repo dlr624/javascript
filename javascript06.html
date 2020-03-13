@@ -122,7 +122,7 @@
             function multi4(a, b) {
                 return a * b;
             }
-
+            //return 기능 2가지  1) 데이터를 돌려주기 .  2) 해당 함수 종료
             multi1(); //1번방식
              
             multi2(10, 20); //2번방식
@@ -376,14 +376,62 @@
         // }
         // 문제 9 문제 8 번 함수를 사용하여 표현하시오
 
-        // function createLotto() {
-        //     for (var i = 0; i < 6; i++) {
-        //     rnd = Math.floor(Math.random() * 45) + 1;
-        //     lotto2.push(rnd);
-        // }
-        // }
-        // function printLotto() {
-        //     for(var i = 0; i < lotto2.length; i++) {
+        function createLotto() {
+            for (var i = 0; i < 6; i++) {
+            rnd = Math.floor(Math.random() * 45) + 1;
+            lotto2.push(rnd);
+        }
+        }
+        function printLotto() {
+            for(var i = 0; i < lotto2.length; i++) {
+            if (i == lotto2.length - 1) {
+                console.log("보너스 로또 숫자 : " + lotto2[i]);
+            
+            }
+            else {
+                console.log((i+1) + "번째 로또 숫자 : " + lotto2[i]);  
+            }
+            }
+        
+            }
+
+        
+        
+        var lotto2 = [];
+        createLotto();
+        printLotto();
+
+        // 문제 10) 문제 9번을 이용해서 이번주 당첨번호를 생성 시 중복 번호가 발생할 수 있다 
+        // 여기서 중복번호를 제거하는 프로그램을 작성하세요
+
+        function createLotto3() {
+            for (var i = 0; i < 6; i++) {
+            rnd = Math.floor(Math.random() * 45) + 1;
+                //기존의 배열에 저장된 숫자와 새로 생성된 숫자가 같지 않으면 배열에저장
+            if (checkLotto3(rnd) == false){
+                for(var i = 0; i < lotto3,length; i++ ){
+                    if (rnd == lotto3[i]){
+                        result = true;
+                        break;
+                        }
+                }
+                lotto3.push(rnd);
+            }
+            else {
+                // 기존의 배열에 저장된 숫자와 새로 생성된 수숫자가 같으면 카운트 1 감소
+                i = i - 1;
+            }
+        
+        }
+    }
+    checkLotto3();
+
+    // function check3 () {
+
+
+    //  }
+        // function printLotto3() {
+        //     for(var i = 0; i < lotto3.length; i++) {
         //     if (i == lotto2.length - 1) {
         //         console.log("보너스 로또 숫자 : " + lotto2[i]);
             
@@ -394,78 +442,31 @@
         //     }
         
         //     }
-
-        
-        
-        // var lotto2 = [];
-        // createLotto();
-        // printLotto();
-
-        // 문제 10) 문제 9번을 이용해서 이번주 당첨번호를 생성 시 중복 번호가 발생할 수 있다 
-        // 여기서 중복번호를 제거하는 프로그램을 작성하세요
-
-    //     function createLotto3() {
-    //         for (var i = 0; i < 6; i++) {
-    //         rnd = Math.floor(Math.random() * 45) + 1;
-    //             //기존의 배열에 저장된 숫자와 새로 생성된 숫자가 같지 않으면 배열에저장
-    //         if (checkLotto3(rnd) == false){
-    //             for(var i = 0; i < lotto3,length; i++ ){
-    //                 if (rnd == lotto3[i]){
-    //                     result = true;
-    //                     break;
-    //                     }
-    //             }
-    //             lotto3.push(rnd);
-    //         }
-    //         else {
-    //             // 기존의 배열에 저장된 숫자와 새로 생성된 수숫자가 같으면 카운트 1 감소
-    //             i = i - 1;
-    //         }
-        
-    //     }
-    // }
-
-    // function check3 () {
-
-
-    // }
-    //     function printLotto3() {
-    //         for(var i = 0; i < lotto3.length; i++) {
-    //         if (i == lotto2.length - 1) {
-    //             console.log("보너스 로또 숫자 : " + lotto2[i]);
-            
-    //         }
-    //         else {
-    //             console.log((i+1) + "번째 로또 숫자 : " + lotto2[i]);  
-    //         }
-    //         }
-        
-    //         }
-    //         var lotto3 = []; //로도 번호가 저장될 배열
-    //         createLotto3();
-    //         printLotto3();
+        //     var lotto3 = []; //로도 번호가 저장될 배열
+        //     createLotto3();
+        //     printLotto3();
 
             // 문11 사용자 입력을 숫자로 받아서 그 숫자가 짝수인지 홀수있지 확인하여 화면에 출력하는 프로그램을 작성하세요ㅕ
 
-            function inputNumber() {
-                var num = prompt("숫자를 입력하시오 :" );
-                num = Number(num);
-                return num;
-            }
-            function checkNumber(num) {
-                if (num % 2 == 1) {
-                    outputNumber(num, "홀수");
-                }
-                else {
-                    outputNumber(num, "짝수");
-                }
-            }
-            function outputNumber(number, text) {
-                console.log(number + "은" + text + "입니다.");
+            // function inputNumber() {
+            //     var num = prompt("숫자를 입력하시오 :" );
+            //     num = Number(num);
+            //     return num;
+            // }
+            // function checkNumber(num) {
+            //     if (num % 2 == 1) {
+            //         outputNumber(num, "홀수");
+            //     }
+            //     else {
+            //         outputNumber(num, "짝수");
+            //     }
+            // }
+            // function outputNumber(number, text) {
+            //     console.log(number + "은" + text + "입니다.");
 
-            }
-            var number = inputNumber();
-            checkNumber(number);
+            // }
+            // var number = inputNumber();
+            // checkNumber(number);
 
 
             
